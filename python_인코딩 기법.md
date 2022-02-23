@@ -48,7 +48,7 @@
 
   
 
-##### 1-1. Python에서 Label Encoding을 사용할 수 있는 방법 2가지
+#### 1-1. Python에서 Label Encoding을 사용할 수 있는 방법 2가지
 
 * **sklearn.processing의 LabelEncoder**
 
@@ -110,7 +110,7 @@
 
 
 
-##### 2-1. Python에서 One-Hot Encoding을 사용할 수 있는 방법 2가지
+#### 2-1. Python에서 One-Hot Encoding을 사용할 수 있는 방법 2가지
 
 * **sklearn.processing의 OneHotEncoder**
 
