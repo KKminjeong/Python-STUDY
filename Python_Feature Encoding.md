@@ -74,6 +74,7 @@
 #### 2 - 2. Original Encoding
 
 *  Original Encoding은 문자형 데이터를 숫자형 데이터로 변환해주는 기법
+* 변수의 순서를 유지하는 Encoding 방식으로 순서형 변수에 대해 사용되어야 함
 * 데이터셋에 등장하는 순서 혹은 알파벳 순서대로 매핑하는 Label Encoding과 달리 변수의 순서 정보를 담을 수 있음
 
 ```
