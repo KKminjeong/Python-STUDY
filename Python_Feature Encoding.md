@@ -49,6 +49,41 @@
   * 트리 알고리즘에 One-Hot Encoding을 적용하게 되면 특정 변수에 대한 정보 이득이 N개의 변수로 찢어지므로, 해당 변수가 높은 정보 이득을 가질 가능성이 낮아짐
 
     결국, 알고리즘에 대해 잘 선택되지 않고, 중요도 역시 낮아짐.
+    
+    
+
+------
 
 
 
+### 2. 인코딩 기법
+
+#### 2 - 1. Binary Encoding
+
+* Binary Encoding은 0과 1을 사용하여 인코딩하는 기법
+
+* One-Hot Encoding과 유사해보일 수 있지만 차이점이 있음
+
+  * **One-Hot Encoding** : 고유값에 해당하는 변수만 1로 표시 -> 1개의 변수가 N개의 변수로 분할됨
+  * **Binary Encoding** : 이진법을 통해 표시 -> 1가의 변수가 log_{2}{N}log2N개의 변수로 분할됨
+
+* Binary Encoding은 훨씬 더 적은 변수만 필요로 한다는 장점을 지님
+
+  
+
+#### 2 - 2. Original Encoding
+
+*  Original Encoding은 문자형 데이터를 숫자형 데이터로 변환해주는 기법
+* 데이터셋에 등장하는 순서 혹은 알파벳 순서대로 매핑하는 Label Encoding과 달리 변수의 순서 정보를 담을 수 있음
+
+```
+# Mapping을 활용환 Ordinal Encoding
+
+temp_dict = {"Cold": 1, "Warm": 2, "Hot": 3, "Very Hot": 4}
+
+df["Temp_Ordinal"] = df['Temperature'].map(temp_dict)
+
+df
+```
+
+* 참고) Label Encoding은 알파벳 순으로 Cold - 0, Hot - 1, Very Hot - 2, Warm - 3으로 인코딩 됨
